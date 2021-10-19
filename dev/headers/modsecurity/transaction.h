@@ -12,6 +12,7 @@ public:
 	Transaction( ModSecurity *transaction, RulesSet *rules, void *logCbData );
 	~Transaction();
 
+	int processRequestBody();
 	bool intervention( ModSecurityIntervention *it );
 
 	ModSecurityIntervention m_it;

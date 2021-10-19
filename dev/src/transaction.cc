@@ -1,5 +1,6 @@
 #include "modsecurity/transaction.h"
 #include "modsecurity/intervention.h"
+#include <string.h>
 
 Transaction::Transaction( ModSecurity * ms, RulesSet * rules, void * logCbData )
 {
@@ -13,9 +14,24 @@ Transaction::~Transaction()
 
 bool Transaction::intervention( ModSecurityIntervention *it )
 {
-	return false;
+	// transaction.cc : 1433
+	if( m_it.disruptive )
+	{
+		if( m_it.url )
+		{
+			it->url = strdup( m_it.url );
+		}
+		it->disruptive = m_it.disruptive;
+		it->status = m_it.status;
+	}
+
+	return it->disruptive;
 }
 
+int Transaction::processRequestBody()
+{
+	return 17;
+}
 
 extern "C" Transaction *msc_new_transaction( ModSecurity *ms,
 	RulesSet *rules, void *logCbData ) {
@@ -40,8 +56,7 @@ extern "C" int msc_process_request_headers( Transaction *transaction ) {
 }
 
 extern "C" int msc_process_request_body( Transaction *transaction ) {
-	//return transaction->processRequestBody();
-	return 40;
+	return transaction->processRequestBody();
 }
 
 
