@@ -18,8 +18,8 @@ void init() {
 
 int process( const char *uri )
 {
-	////Transaction *transaction = NULL;
-	////transaction = msc_new_transaction( modsec, rules, NULL );
+	Transaction *transaction = NULL;
+	transaction = msc_new_transaction( modsec, rules, NULL );
 	////msc_process_connection( transaction, "127.0.0.1", 80, "127.0.0.1", 80 );
 	////fprintf( stderr, "URI=%s\n", uri );
 	////msc_process_uri( transaction, uri, "CONNECT", "1.1" );
