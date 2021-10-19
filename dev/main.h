@@ -5,4 +5,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "modsecurity/modsecurity.h"
+
 #endif//__MAIN__

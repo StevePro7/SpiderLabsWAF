@@ -13,21 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\modsec">
-      <UniqueIdentifier>{2233a0db-30c5-48d7-bb07-de5ee98b543a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\modsec">
+    <Filter Include="Source Files\modsecurity">
       <UniqueIdentifier>{55cd72d1-9bcf-4df3-888d-58127f859e1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\modsecurity">
+      <UniqueIdentifier>{2233a0db-30c5-48d7-bb07-de5ee98b543a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="modsecurity\modsecurity.cc">
+      <Filter>Source Files\modsecurity</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modsecurity\modsecurity.h">
+      <Filter>Header Files\modsecurity</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
