@@ -7,5 +7,6 @@
 
 #include "modsecurity/modsecurity.h"
 #include "modsecurity/transaction.h"
+#include "modsecurity/rules_set.h"
 
 #endif//__MAIN__
