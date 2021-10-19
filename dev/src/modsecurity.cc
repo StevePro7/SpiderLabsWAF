@@ -1,5 +1,5 @@
 #include "modsecurity/modsecurity.h"
 
-void foo()
+extern "C" void foo( void )
 {
 }
