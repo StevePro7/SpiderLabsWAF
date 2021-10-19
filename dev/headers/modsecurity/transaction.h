@@ -3,6 +3,7 @@
 
 #include "modsecurity/modsecurity.h"
 #include "modsecurity/rules_set.h"
+#include "modsecurity/intervention.h"
 
 class Transaction
 {
@@ -25,6 +26,8 @@ extern "C"
 		const char *protocol, const char *http_version );
 	int msc_process_request_headers( Transaction *transaction );
 	int msc_process_request_body( Transaction *transaction );
+
+	int msc_intervention( Transaction *transaction, ModSecurityIntervention *it );
 
 #ifdef __cplusplus
 }

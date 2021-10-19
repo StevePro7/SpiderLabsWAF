@@ -15,7 +15,6 @@ extern "C"
 {
 #endif
 
-	void foo() {}
 
 #ifdef __cplusplus
 }

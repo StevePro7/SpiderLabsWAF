@@ -31,8 +31,8 @@ int process( const char *uri )
 	intervention.url = NULL;
 	intervention.log = NULL;
 	intervention.disruptive = 0;
-	////int inter = msc_intervention( transaction, &intervention );
-	int inter = 0;
+	int inter = msc_intervention( transaction, &intervention );
+	//int inter = 0;
 	fprintf( stderr, "intervention=%i\n", inter );
 	return inter;
 }

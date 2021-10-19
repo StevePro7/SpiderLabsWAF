@@ -31,3 +31,10 @@ extern "C" int msc_process_request_body( Transaction *transaction ) {
 	//return transaction->processRequestBody();
 	return 40;
 }
+
+
+extern "C" int msc_intervention( Transaction *transaction,
+	ModSecurityIntervention *it ) {
+	//return transaction->intervention( it );
+	return 1;
+}
