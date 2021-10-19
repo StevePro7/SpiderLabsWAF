@@ -47,5 +47,8 @@
     <ClInclude Include="headers\modsecurity\rules_set.h">
       <Filter>Header Files\modsec</Filter>
     </ClInclude>
+    <ClInclude Include="headers\modsecurity\intervention.h">
+      <Filter>Header Files\modsec</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

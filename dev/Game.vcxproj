@@ -152,6 +152,7 @@
     <ClCompile Include="src\transaction.cc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="headers\modsecurity\intervention.h" />
     <ClInclude Include="headers\modsecurity\modsecurity.h" />
     <ClInclude Include="headers\modsecurity\rules_set.h" />
     <ClInclude Include="headers\modsecurity\transaction.h" />

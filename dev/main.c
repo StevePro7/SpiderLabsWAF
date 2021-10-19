@@ -25,11 +25,12 @@ int process( const char *uri )
 	msc_process_uri( transaction, uri, "CONNECT", "1.1" );
 	msc_process_request_headers( transaction );
 	msc_process_request_body( transaction );
-	////ModSecurityIntervention intervention;
-	////intervention.status = 200;
-	////intervention.url = NULL;
-	////intervention.log = NULL;
-	////intervention.disruptive = 0;
+	
+	ModSecurityIntervention intervention;
+	intervention.status = 200;
+	intervention.url = NULL;
+	intervention.log = NULL;
+	intervention.disruptive = 0;
 	////int inter = msc_intervention( transaction, &intervention );
 	int inter = 0;
 	fprintf( stderr, "intervention=%i\n", inter );
