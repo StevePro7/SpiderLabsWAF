@@ -30,6 +30,9 @@
     <ClCompile Include="src\transaction.cc">
       <Filter>Source Files\modsec</Filter>
     </ClCompile>
+    <ClCompile Include="src\rules_set.cc">
+      <Filter>Source Files\modsec</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -39,6 +42,9 @@
       <Filter>Header Files\modsec</Filter>
     </ClInclude>
     <ClInclude Include="headers\modsecurity\transaction.h">
+      <Filter>Header Files\modsec</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\modsecurity\rules_set.h">
       <Filter>Header Files\modsec</Filter>
     </ClInclude>
   </ItemGroup>
