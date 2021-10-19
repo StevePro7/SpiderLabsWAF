@@ -4,6 +4,11 @@ Transaction::Transaction( ModSecurity * ms, RulesSet * rules, void * logCbData )
 {
 }
 
+bool Transaction::intervention( ModSecurityIntervention *it )
+{
+	return false;
+}
+
 
 extern "C" Transaction *msc_new_transaction( ModSecurity *ms,
 	RulesSet *rules, void *logCbData ) {
@@ -35,6 +40,6 @@ extern "C" int msc_process_request_body( Transaction *transaction ) {
 
 extern "C" int msc_intervention( Transaction *transaction,
 	ModSecurityIntervention *it ) {
-	//return transaction->intervention( it );
-	return 1;
+	return transaction->intervention( it );
+	//return 1;
 }

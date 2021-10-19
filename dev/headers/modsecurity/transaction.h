@@ -10,6 +10,8 @@ class Transaction
 public:
 	Transaction( ModSecurity *transaction, RulesSet *rules, void *logCbData );
 	~Transaction() {}
+
+	bool intervention( ModSecurityIntervention *it );
 };
 
 
