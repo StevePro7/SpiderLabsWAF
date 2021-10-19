@@ -5,13 +5,16 @@
 #include "modsecurity/rules_set.h"
 #include "modsecurity/intervention.h"
 
+
 class Transaction
 {
 public:
 	Transaction( ModSecurity *transaction, RulesSet *rules, void *logCbData );
-	~Transaction() {}
+	~Transaction();
 
 	bool intervention( ModSecurityIntervention *it );
+
+	ModSecurityIntervention m_it;
 };
 
 

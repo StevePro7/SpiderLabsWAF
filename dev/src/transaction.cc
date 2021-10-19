@@ -1,7 +1,14 @@
 #include "modsecurity/transaction.h"
+#include "modsecurity/intervention.h"
 
 Transaction::Transaction( ModSecurity * ms, RulesSet * rules, void * logCbData )
 {
+	intervention::reset( &m_it );
+}
+
+Transaction::~Transaction() 
+{
+	intervention::clean( &m_it );
 }
 
 bool Transaction::intervention( ModSecurityIntervention *it )
