@@ -6,5 +6,6 @@
 #include <stdlib.h>
 
 #include "modsecurity/modsecurity.h"
+#include "modsecurity/transaction.h"
 
 #endif//__MAIN__
