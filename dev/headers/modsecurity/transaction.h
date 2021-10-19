@@ -24,6 +24,7 @@ extern "C"
 	int msc_process_uri( Transaction *transaction, const char *uri,
 		const char *protocol, const char *http_version );
 	int msc_process_request_headers( Transaction *transaction );
+	int msc_process_request_body( Transaction *transaction );
 
 #ifdef __cplusplus
 }

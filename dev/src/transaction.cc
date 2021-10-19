@@ -26,3 +26,8 @@ extern "C" int msc_process_request_headers( Transaction *transaction ) {
 	//return transaction->processRequestHeaders();
 	return 30;
 }
+
+extern "C" int msc_process_request_body( Transaction *transaction ) {
+	//return transaction->processRequestBody();
+	return 40;
+}

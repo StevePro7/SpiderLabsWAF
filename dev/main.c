@@ -24,7 +24,7 @@ int process( const char *uri )
 	fprintf( stderr, "URI=%s\n", uri );
 	msc_process_uri( transaction, uri, "CONNECT", "1.1" );
 	msc_process_request_headers( transaction );
-	////msc_process_request_body( transaction );
+	msc_process_request_body( transaction );
 	////ModSecurityIntervention intervention;
 	////intervention.status = 200;
 	////intervention.url = NULL;
