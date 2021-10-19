@@ -8,7 +8,6 @@ int main( int argc, char **argv )
 	ModSecurity *modsec = msc_init();
 	int age = modsec->GetAge();
 
-	foo();
 	bar();
 	return 0;
 }

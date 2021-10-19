@@ -16,7 +16,7 @@ extern "C"
 
 
 	ModSecurity *msc_init( void );
-	void foo( void );
+	void msc_cleanup( ModSecurity *msc );
 
 #ifdef __cplusplus
 }

@@ -9,6 +9,6 @@ extern "C" ModSecurity *msc_init( void ) {
 	return new ModSecurity();
 }
 
-extern "C" void foo( void )
-{
+extern "C" void msc_cleanup( ModSecurity *msc ) {
+	delete msc;
 }
