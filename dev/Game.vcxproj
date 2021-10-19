@@ -147,9 +147,11 @@
   <ItemGroup>
     <ClCompile Include="main.c" />
     <ClCompile Include="src\modsecurity.cc" />
+    <ClCompile Include="src\transaction.cc" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\modsecurity\modsecurity.h" />
+    <ClInclude Include="headers\modsecurity\transaction.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
