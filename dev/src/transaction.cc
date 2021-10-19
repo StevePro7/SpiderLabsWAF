@@ -13,5 +13,16 @@ extern "C" Transaction *msc_new_transaction( ModSecurity *ms,
 extern "C" int msc_process_connection( Transaction *transaction,
 	const char *client, int cPort, const char *server, int sPort ) {
 	//return transaction->processConnection( client, cPort, server, sPort );
-	return 17;
+	return 10;
+}
+
+extern "C" int msc_process_uri( Transaction *transaction, const char *uri,
+	const char *protocol, const char *http_version ) {
+	//return transaction->processURI( uri, protocol, http_version );
+	return 20;
+}
+
+extern "C" int msc_process_request_headers( Transaction *transaction ) {
+	//return transaction->processRequestHeaders();
+	return 30;
 }

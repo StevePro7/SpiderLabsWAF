@@ -21,6 +21,9 @@ extern "C"
 		RulesSet *rules, void *logCbData );
 	int msc_process_connection( Transaction *transaction,
 		const char *client, int cPort, const char *server, int sPort );
+	int msc_process_uri( Transaction *transaction, const char *uri,
+		const char *protocol, const char *http_version );
+	int msc_process_request_headers( Transaction *transaction );
 
 #ifdef __cplusplus
 }
